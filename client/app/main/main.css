@@ -1,30 +1,85 @@
-.thing-form {
-    margin: 20px 0;
+#hero-img {
+    background: url(/assets/images/main_hero.jpg);
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
 
-#banner {
-    border-bottom: none;
-    margin-top: -20px;
-}
-
-#banner h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-.hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
+.countdown-area {
+    margin: 0 auto;
+    position: fixed;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    top: 250px;
+    width: 100%;
 }
 
-.footer {
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 70px;
-    border-top: 1px solid #E5E5E5;
+.countdown-days-curve {
+    height: 160px;
+    background-color: white;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    border-radius: 100px 20px 0 0;
+}
+
+.countdown-hms-curve {
+    height: 150px;
+    background-color: white;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    border-radius: 0px 0px 100px 20px;
+}
+
+.countdown-header {
+    color: #1c4280;
+    font-weight: bold
+}
+
+.countdown-body-days {
+    color: #b22234;
+    font-weight: bold;
+    font-size: 110px;
+    line-height: 1.2
+}
+
+.countdown-body-hms {
+    color: #b22234;
+    font-weight: bold;
+    font-size: 90px
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+@media only screen and (max-device-width: 767px) {
+    .countdown-area {
+        margin: 0 auto;
+        position: fixed;
+        text-align: center;
+        top: 70px;
+        width: 100%;
+    }
+    .countdown-days-curve {
+        height: 110px;
+        background-color: transparent;
+    }
+    .countdown-hms-curve {
+        height: 110px;
+        background-color: transparent;
+        opacity: 0.9;
+        border-radius: 0px 0px 100px 20px;
+    }
+    .countdown-body-days {
+        color: #b22234;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 1.2
+    }
+    .countdown-body-hms {
+        color: #b22234;
+        font-weight: bold;
+        font-size: 50px
+    }
+
+
 }

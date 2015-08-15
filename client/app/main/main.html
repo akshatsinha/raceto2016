@@ -1,13 +1,17 @@
-<img src="assets/images/main_hero.jpg" alt="US 2012" style="width: 100%; height: 100%; opacity: 0.4; filter: alpha(opacity=40); ">
-<div ng-include="'components/navbar/navbar.html'" style="position: fixed; top: 0; left: 0; right: 0;"></div>
-<div style="margin: 0 auto; width: 100%; top: 250px; text-align: center; position: fixed;">
+<link rel="stylesheet" href="app/main/main.css">
+
+<div id="hero-img"></div>
+
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+
+<div class="countdown-area">
     <timer end-time="1478592000000">
         <div class="row">
             <div class="col-md-4"></div>
-            <div style="height: 160px; background-color: white; opacity: 0.9; border-radius: 100px 20px 0 0;" class="col-md-4">
-                <span style="color: #1c4280; font-weight: bold">DAYS</span>
+            <div class="countdown-days-curve col-md-4">
+                <span class="countdown-header">DAYS</span>
                 <br>
-                <span style="color: #b22234; font-weight: bold; font-size: 110px; line-height: 1.2">{{days}}</span>
+                <span class="countdown-body-days">{{days}}</span>
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -16,21 +20,21 @@
 
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4" style="height: 150px; background-color: white; opacity: 0.9; border-radius: 0px 0px 100px 20px;">
+            <div class="countdown-hms-curve col-md-4" >
                 <div class="col-md-4">
-                    <span style="color: #1c4280; font-weight: bold">HOURS</span>
+                    <span class="countdown-header">HOURS</span>
                     <br>
-                    <span style="color: #b22234; font-weight: bold; font-size: 90px">{{hours}}</span>
+                    <span class="countdown-body-hms" style="">{{hours}}</span>
                 </div>
                 <div class="col-md-4">
-                    <span style="color: #1c4280; font-weight: bold">MINUTES</span>
+                    <span class="countdown-header">MINUTES</span>
                     <br>
-                    <span style="color: #b22234; font-weight: bold; font-size: 90px">{{minutes}}</span>
+                    <span class="countdown-body-hms">{{minutes}}</span>
                 </div>
                 <div class="col-md-4">
-                    <span style="color: #1c4280; font-weight: bold">SECONDS</span>
+                    <span class="countdown-header">SECONDS</span>
                     <br>
-                    <span style="color: #b22234; font-weight: bold; font-size: 90px">{{seconds}}</span>
+                    <span class="countdown-body-hms">{{seconds}}</span>
                 </div>
             </div>
             <div class="col-md-4"></div>
@@ -39,8 +43,9 @@
 </div>
 
 <script type="text/javascript">
-    $('html, body').css({
-        'overflow': 'hidden',
-        'height': '100%'
+    $(function(){
+        $(window).load(function() {
+            $('#hero-img').css({'height':(($(window).height()))+'px'});
+        });
     });
 </script>
