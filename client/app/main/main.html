@@ -45,6 +45,10 @@
 <script type="text/javascript">
     $(function(){
         $(window).load(function() {
+            $('html, body').css({
+                'overflow': 'hidden',
+                'height': '100%'
+            });
             $('#hero-img').css({'height':(($(window).height()))+'px'});
         });
     });

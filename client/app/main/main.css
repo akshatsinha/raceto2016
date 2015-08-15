@@ -46,11 +46,6 @@
     font-size: 90px
 }
 
-html, body {
-    overflow: hidden;
-    height: 100%;
-}
-
 @media only screen and (max-device-width: 767px) {
     .countdown-area {
         margin: 0 auto;
