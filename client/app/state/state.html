@@ -1,5 +1,26 @@
-<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top" style="z-index: 1"></div>
 
-<div ng-controller="StateCtrl as stc" style="margin-top: 100px;">
-    {{stc.state}}
+<div class="col-md-2" style="margin-top: 100px;" ng-controller="LeftStateListCtrl as lslc">
+
+    <div class="btn-group" style="float: right;" ng-class="{'open': lslc.stateMenuOpen}" >
+        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width: 200px;" ng-click="lslc.openStateMenu()">
+            Select State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" style="height: 500px; overflow: auto; width: 200px;">
+            <li ng-repeat="st in lslc.stateList">
+                <a ng-href="/state/{{st.name}}/">{{st.name}}</a>
+            </li>
+        </ul>
+    </div>
 </div>
+
+
+<div class="col-md-7" style="margin-top: 100px; height: 100px; background-color: yellow;">
+    <div ng-controller="StateCtrl as stc">
+        {{stc.state}}
+    </div>
+</div>
+
+
+<div class="col-md-2" style="margin-top: 100px; height: 100px; background-color: blue;">advert</div>
