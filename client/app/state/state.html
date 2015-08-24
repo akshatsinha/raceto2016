@@ -1,8 +1,14 @@
-<div ng-include="'components/navbar/navbar.html'" class="navbar-top" style="z-index: 1"></div>
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top" style="z-index: 10"></div>
 
-<div class="col-md-2" style="margin-top: 100px;" ng-controller="LeftStateListCtrl as lslc">
 
-    <div class="btn-group" style="float: right;" ng-class="{'open': lslc.stateMenuOpen}" >
+<div class="col-md-3" style="margin-top: 100px; " ng-controller="LeftStateListCtrl as lslc">
+
+    <div class="list-group">
+        <a ng-repeat="st in lslc.stateList" ng-href="/state/{{st}}/" class="list-group-item" ng-class="{'active': st == lslc.state}" style="width: 250px; float: right">
+            {{st | uppercase}}
+        </a>
+    </div>
+    <!--<div class="btn-group" style="float: right;" ng-class="{'open': lslc.stateMenuOpen}" >
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width: 200px;" ng-click="lslc.openStateMenu()">
             Select State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="caret"></span>
@@ -13,14 +19,75 @@
             </li>
         </ul>
     </div>
+-->
 </div>
 
 
-<div class="col-md-7" style="margin-top: 100px; height: 100px; background-color: yellow;">
+<div class="col-md-6" style="margin-top: 100px; width: 900px;">
     <div ng-controller="StateCtrl as stc">
-        {{stc.state}}
+
+        <div class="panel panel-default col-md-12">
+
+            <div class="panel-heading">
+                <h1 style="text-align: center; font-size: 70px; color: #b22234">{{ stc.state | uppercase }}</h1>
+            </div>
+
+            <div class="panel-body col-md-12" style="border-bottom: 1px dotted #666" >
+                <div class="col-md-4">
+                    <img ng-src="assets/images/states/{{stc.state}}.gif" height="300px"  style="margin: 0 auto;">
+                </div>
+                <div class="col-md-8" style="text-align: center">
+                    <h2>ELECTORAL VOTES</h2>
+                    <p class="text-danger" style="font-size: 100px; color:#1c4280">{{ stc.stateInfo.votes }}</p>
+                    <div class="well well-lg" style="width: 350px;margin: 0 auto;">
+                        <h2>2016 Prediction</h2>
+                        <h1>{{ stc.stateInfo.prediction2016 }}</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel-body col-md-12">
+                <h3 style="text-align: center;">Trend - Popular Vote</h3>
+                <div class="col-md-4" ng-repeat="pastResult in stc.stateInfo.past_results">
+                    <div style="text-align: center"><h4>{{ pastResult.year }}</h4></div>
+                    <canvas class="chart chart-doughnut" data="pastResult.data" labels="pastResult.labels" colours="pastResult.colours" options="pastResult.options"></canvas>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Candidate</th>
+                                <th>Popularity Vote</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ pastResult.participants[0] }}</td>
+                                <td>{{ pastResult.popular_vote[0] }}</td>
+                                <td><img src="assets/images/winner_check.png" height="17" ng-show="pastResult.winner[0]"></td>
+                            </tr>
+                            <tr>
+                                <td>{{ pastResult.participants[1] }}</td>
+                                <td>{{ pastResult.popular_vote[1] }}</td>
+                                <td><img src="assets/images/winner_check.png" height="17" ng-show="pastResult.winner[1]"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="breadcrumb" >
+            <li><a href="/">Home</a></li>
+            <li><a href="/states/">States</a></li>
+            <li class="active">{{ stc.state }}</li>
+        </ul>
+
     </div>
 </div>
 
 
-<div class="col-md-2" style="margin-top: 100px; height: 100px; background-color: blue;">advert</div>
+<!--<div class="col-md-2" style="margin-top: 100px; height: 100px; background-color: blue;">advert</div>-->

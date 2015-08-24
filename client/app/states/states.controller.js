@@ -3,5 +3,8 @@
 angular.module('raceApp')
     .controller('StatesCtrl', function(statesSvc) {
         var stsc = this;
-        stsc.stateList = statesSvc.getStatesList();
+        statesSvc.getStatesNamesAndVotes()
+            .success(function (response) {
+                stsc.stateList = response;
+            });
     });

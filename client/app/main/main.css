@@ -2,6 +2,7 @@
     background: url(/assets/images/main_hero.jpg);
     opacity: 0.4;
     filter: alpha(opacity=40);
+    background-size: cover;
 }
 
 .countdown-area {

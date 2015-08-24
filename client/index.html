@@ -14,6 +14,7 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -60,11 +61,11 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/angular-timer/dist/assets/js/angular-timer-all.min.js"></script>
-      <script scr="bower_components/momentjs/min/moment.min.js"></script>
-      <script scr="bower_components/momentjs/min/locales.min.js"></script>
+      <script src="bower_components/momentjs/moment.js"></script>
       <script src="bower_components/humanize-duration/humanize-duration.js"></script>
-
+      <script src="bower_components/angular-timer/dist/angular-timer.js"></script>
+      <script src="bower_components/Chart.js/Chart.js"></script>
+      <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -73,10 +74,10 @@
           <!-- injector:js -->
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
-          <script src="app/states/states.controller.js"></script>
-          <script src="app/states/states.js"></script>
           <script src="app/state/state.controller.js"></script>
           <script src="app/state/state.js"></script>
+          <script src="app/states/states.controller.js"></script>
+          <script src="app/states/states.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
