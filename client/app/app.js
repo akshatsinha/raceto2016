@@ -10,7 +10,10 @@ angular.module('raceApp', [
         'chart.js'
     ])
     .value('_', window._)
-    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
         $urlRouterProvider
             .otherwise('/');
 
