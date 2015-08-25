@@ -12,14 +12,14 @@ angular.module('raceApp')
     .factory('statesSvc', function($http) {
         return {
             getStatesList: function() {
-                return $http.get('/api/states/');
+                return $http.get('http://raceto2016:9000/api/states/');
             },
             getStatesNamesAndVotes: function() {
-                return $http.get('/api/states/nameandvotes');
+                return $http.get('http://raceto2016:9000/api/states/nameandvotes');
             },
             getStateResult: function(state) {
                 return $http({
-                    url: '/api/states/statsbystate',
+                    url: 'http://raceto2016:9000/api/states/statsbystate',
                     method: 'GET',
                     params: {state: state}
                 });
