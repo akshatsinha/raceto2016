@@ -13,7 +13,7 @@ var config = require('./config/environment');
 var app = express();
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
-    res.header('Access-Control-Allow-Origin', 'http://raceto2016.com:9000');
+    res.header('Access-Control-Allow-Origin', 'http://raceto2016.com');
     // Request methods you wish to allow
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     // Request headers you wish to allow
