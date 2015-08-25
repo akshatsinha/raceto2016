@@ -4,6 +4,17 @@
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
+
+# ##############################################################################
+# # SITEMAP.XML                                                                #
+# ##############################################################################
+
+<Files ~  "sitemap\.xml$">
+  Order allow,deny
+  Allow from all
+</Files>
+
+
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
 # ##############################################################################
