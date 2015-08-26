@@ -42,7 +42,7 @@ exports.statsbystate = function(req, res) {
         '4': 'Republican - Likely',
         '5': 'Either Party'
     };
-    connection.query('select ss.state_name, ss.electoral_votes, ss.prediction_2016, pr.year, pr.dem_pv_percent, pr.gop_pv_percent, pr.dem_candidate, pr.gop_candidate, pr.dem_pv_count, pr.gop_pv_count from states ss inner join past_results pr on ss.id = pr.state_id where ss.state_name = "' + req.query.state + '"', function (err, rows, fields) {
+    connection.query('select ss.state_name, ss.electoral_votes, ss.prediction_2016, pr.year, pr.dem_pv_percent, pr.gop_pv_percent, pr.dem_candidate, pr.gop_candidate, pr.dem_pv_count, pr.gop_pv_count from states ss inner join past_results pr on ss.id = pr.state_id where ss.state_name = "' + req.query.state + '" order by year asc', function (err, rows, fields) {
         if (err) throw err;
         _(rows).forEach(function (elem) {
             var pr = {};
