@@ -46,7 +46,7 @@ angular.module('raceApp', [
         return {
             getEnv: function() {
                 if (window.location.host.indexOf('localhost') === -1)
-                    return 'http://raceto2016.com/';
+                    return 'http://raceto2016.com:9000/';
                 else
                     return 'http://localhost:9000/';
             }
