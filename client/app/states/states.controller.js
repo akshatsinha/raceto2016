@@ -10,7 +10,6 @@ angular.module('raceApp')
         stsc.dispatch('title:update', 'Electoral Votes');
 
         stsc.viewType = function(view_id) {
-            console.log(view_id);
             if (view_id === 0) {
                 stsc.thumbnailView = true;
                 stsc.tableView = false;
