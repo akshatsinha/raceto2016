@@ -6,12 +6,23 @@
     <br>
     <ul class="nav nav-tabs">
         <li ng-class="{'active': stsc.thumbnailView}" ng-click="stsc.viewType(0)">
-            <a href="#" data-toggle="tab" aria-expanded="true">Thumbnail View</a>
+            <a href="#" data-toggle="tab" aria-expanded="true" style="text-align: center">
+            <div style="width: 125px;">
+                <div style="display: inline-block;">Thumbnail<br>View</div>
+                <span style="background: url('assets/images/thumbnail_icon.png') no-repeat; background-size: 35px 35px; float: right; display: inline-block; width: 35px; height: 35px; opacity: 0.5;"></span>
+            </div>
+            </a>
+
         </li>
         <li ng-class="{'active': stsc.tableView}" ng-click="stsc.viewType(1)">
-            <a href="#" data-toggle="tab" aria-expanded="true">Table View</a>
+            <a href="#" data-toggle="tab" aria-expanded="true" style="text-align: center">
+                <div style="width: 125px;">
+                    <div style="display: inline-block;">Table<br>View</div>
+                    <span style="background: url('assets/images/table_icon.png') no-repeat; background-size: 35px 35px; float: right; display: inline-block; width: 35px; height: 35px; opacity: 0.5; margin-top: -2px;"></span>
+                </div>
         </li>
     </ul>
+
     <div class="tab-content">
         <br>
         <!-- Thumbnail View -->

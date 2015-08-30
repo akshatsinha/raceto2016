@@ -38,6 +38,10 @@ angular.module('raceApp')
         var lslc = this;
         lslc.stateMenuOpen = false;
         lslc.state = $stateParams.state;
+        lslc.mobileDevice = false;
+
+        if (window.screen.width <= 420)
+            lslc.mobileDevice = true;
 
         statesSvc.getStatesList()
             .success(function (response) {

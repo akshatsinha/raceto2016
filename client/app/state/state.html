@@ -1,35 +1,36 @@
-<div ng-include="'components/navbar/navbar.html'" class="navbar-top" style="z-index: 10"></div>
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
 
 
 <div class="col-md-3" style="margin-top: 100px; " ng-controller="LeftStateListCtrl as lslc">
 
-    <div class="list-group">
+    <div class="list-group" ng-if="!lslc.mobileDevice">
         <a ng-repeat="st in lslc.stateList" ng-href="/state/{{st}}/" class="list-group-item" ng-class="{'active': st == lslc.state}" style="width: 250px; float: right">
             {{st | uppercase}}
         </a>
     </div>
-    <!--<div class="btn-group" style="float: right;" ng-class="{'open': lslc.stateMenuOpen}" >
+
+    <div class="btn-group" style="float: left;" ng-class="{'open': lslc.stateMenuOpen}" ng-if="lslc.mobileDevice">
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width: 200px;" ng-click="lslc.openStateMenu()">
             Select State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" style="height: 500px; overflow: auto; width: 200px;">
             <li ng-repeat="st in lslc.stateList">
-                <a ng-href="/state/{{st.name}}/">{{st.name}}</a>
+                <a ng-href="/state/{{st}}/">{{st}}</a>
             </li>
         </ul>
     </div>
--->
+
 </div>
 
 
-<div class="col-md-6" style="margin-top: 100px; width: 900px;">
+<div class="col-md-7" style="margin-top: 100px;">
     <div ng-controller="StateCtrl as stc">
 
-        <div class="panel panel-default col-md-12">
+        <div class="panel panel-default col-md-12" style="padding: 0;">
 
             <div class="panel-heading">
-                <h1 style="text-align: center; font-size: 70px; color: #b22234">{{ stc.state | uppercase }}</h1>
+                <h1 id="state-heading" style="text-align: center; color: #b22234">{{ stc.state | uppercase }}</h1>
             </div>
 
             <div class="panel-body col-md-12" style="border-bottom: 1px dotted #666" >
