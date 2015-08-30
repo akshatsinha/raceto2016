@@ -1,14 +1,17 @@
 'use strict';
 
 angular.module('raceApp')
-    .controller('StateCtrl', function ($stateParams, statesSvc, _) {
+    .controller('StateCtrl', function ($scope, $stateParams, statesSvc, _, EventDispatchingSvc) {
 
         function convertStringToNumber(input) {
             return parseInt(input.replace(/,/g, ''));
         }
 
         var stc = this;
+        angular.extend(stc, new EventDispatchingSvc($scope));
         stc.state = $stateParams.state;
+        stc.dispatch('title:update', stc.state.toUpperCase());
+
         statesSvc.getStatesList()
             .success(function (response) {
                 if (_.contains(response, stc.state) == false)

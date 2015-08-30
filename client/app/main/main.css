@@ -47,6 +47,10 @@
     font-size: 90px
 }
 
+.navbar-top {
+    z-index: 10000;
+}
+
 @media only screen and (max-device-width: 767px) {
     .countdown-area {
         margin: 0 auto;
@@ -75,6 +79,9 @@
         color: #b22234;
         font-weight: bold;
         font-size: 50px
+    }
+    .navbar-top {
+        z-index: 10000;
     }
 
 

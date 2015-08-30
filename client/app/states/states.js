@@ -9,17 +9,17 @@ angular.module('raceApp')
                 controller: 'StatesCtrl'
             })
     })
-    .factory('statesSvc', function($http) {
+    .factory('statesSvc', function($http, EnvSvc) {
         return {
             getStatesList: function() {
-                return $http.get('http://raceto2016.com:9000/api/states/');
+                return $http.get(EnvSvc.getEnv() + 'api/states/');
             },
             getStatesNamesAndVotes: function() {
-                return $http.get('http://raceto2016.com:9000/api/states/nameandvotes');
+                return $http.get(EnvSvc.getEnv() + 'api/states/nameandvotes');
             },
             getStateResult: function(state) {
                 return $http({
-                    url: 'http://raceto2016.com:9000/api/states/statsbystate',
+                    url: EnvSvc.getEnv() + 'api/states/statsbystate',
                     method: 'GET',
                     params: {state: state}
                 });
