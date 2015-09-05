@@ -1,0 +1,145 @@
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+<div class="col-md-3" style="margin-top: 70px; " ng-controller="CalendarLeftCtrl as clc">
+    <div class="list-group">
+        <h3>Debate Schedules</h3>
+        <a href="#" class="list-group-item active" ng-click="clc.clickedSchedule('repdebate')">
+            <h4 class="list-group-item-heading">2016 Republican Debate Schedule</h4>
+            <p class="list-group-item-text">The Republican National Committee released list of officially sanctioned debates</p>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('demdebate')">
+            <h4 class="list-group-item-heading">2016 Democratic Debate Schedule</h4>
+            <p class="list-group-item-text">Up-to-date schedule of the Democratic Primary Debates of 2015/2016</p>
+        </a>
+    </div>
+    <br>
+    <div class="list-group">
+        <h3>Primary Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('iowa')">
+            <h4 class="list-group-item-heading">2016 Iowa Caucus</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('newhampshire')">
+            <h4 class="list-group-item-heading">2016 New Hampshire Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('southcarolina')">
+            <h4 class="list-group-item-heading">2016 South Carolina Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('nevada')">
+            <h4 class="list-group-item-heading">2016 Nevada Caucus</h4>
+        </a>
+    </div>
+</div>
+<div class="col-md-7" style="margin-top: 60px; margin-left: 50px;" ng-controller="CalendarCtrl as cal">
+    <h1>2015</h1>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Moderators</th>
+                <th>Candidates</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aug 6</td>
+                <td>Fox News Republican<br>Presidential<br>Debate</td>
+                <td>Quicken Loans Arena,<br>Cleveland</td>
+                <td>"America’s Newsroom" co-anchors<br>- Bill Hemmer<br>- Martha MacCallum</td>
+                <td>Rick Perry<br>Rick Santorum<br>Bobby Jindal<br>Carly Fiorina<br>Lindsey Graham<br>Former George Pataki<br>Jim Gilmore</td>
+                <td>5:00 PM ET</td>
+            </tr>
+            <tr>
+                <td>Aug 6</td>
+                <td>Fox News Primetime<br>Republican Presidential<br>Debate</td>
+                <td>Quicken Loans Arena,<br>Cleveland</td>
+                <td>"Fox News Sunday" anchor Chris Wallace<br>"Special Report" anchor Bret Baier<br>"The Kelly File" anchor Megyn Kelly</td>
+                <td>Donald Trump<br>Jeb Bush<br>Scott Walker<br>Mike Huckabee<br>Ben Carson<br>Ted Cruz<br>Marco Rubio<br>Rand Paul<br>Chris Christie<br>John Kasich</td>
+                <td>9:00 PM ET</td>
+            </tr>
+            <tr>
+                <td>Sep 16</td>
+                <td>Republican Presidential Debate</td>
+                <td>Ronald Reagan Presidential Library,<br>Simi Valley, California</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Oct 28</td>
+                <td>Republican Presidential Debate</td>
+                <td>Coors Events Center,<br>Boulder, CO</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Dec 15</td>
+                <td>Republican Presidential Debate</td>
+                <td>Reno, Nevada</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h1>2016</h1>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Moderators</th>
+                <th>Candidates</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Feb 6</td>
+                <td>Republican Presidential Debate</td>
+                <td>New Hampshire</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Feb 13</td>
+                <td>Republican Presidential Debate</td>
+                <td>South Carolina</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>Feb 26</td>
+                <td>Republican Presidential Debate</td>
+                <td>Houston, TX</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-1" style="margin-top: 85px;">
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/gopdebate" data-widget-id="640055172635295745">#gopdebate</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+
+
+<script type="text/javascript">
+$(function() {
+    $(document).ready(function() {
+        $('html, body').css({
+            'overflow': 'auto',
+            'height': '100%'
+        });
+    });
+});
+</script>

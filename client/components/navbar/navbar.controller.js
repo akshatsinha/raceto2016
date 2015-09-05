@@ -8,6 +8,9 @@ angular.module('raceApp')
         }, {
             'title': 'States',
             'link': '/states/'
+        }, {
+            'title': 'Calendar',
+            'link': '/calendar/'
         }];
 
         $scope.isCollapsed = true;

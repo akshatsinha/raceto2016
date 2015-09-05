@@ -1,0 +1,73 @@
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+
+<div class="col-md-3" style="margin-top: 70px; " ng-controller="CalendarLeftCtrl as clc">
+    <div class="list-group">
+        <h3>Debate Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('repdebate')">
+            <h4 class="list-group-item-heading">2016 Republican Debate Schedule</h4>
+            <p class="list-group-item-text">The Republican National Committee released list of officially sanctioned debates</p>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('demdebate')">
+            <h4 class="list-group-item-heading">2016 Democratic Debate Schedule</h4>
+            <p class="list-group-item-text">Up-to-date schedule of the Democratic Primary Debates of 2015/2016</p>
+        </a>
+    </div>
+    <br>
+    <div class="list-group">
+        <h3>Primary Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('iowa')">
+            <h4 class="list-group-item-heading">2016 Iowa Caucus</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('newhampshire')">
+            <h4 class="list-group-item-heading">2016 New Hampshire Primary</h4>
+        </a>
+        <a href="#" class="list-group-item active" ng-click="clc.clickedSchedule('southcarolina')">
+            <h4 class="list-group-item-heading">2016 South Carolina Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('nevada')">
+            <h4 class="list-group-item-heading">2016 Nevada Caucus</h4>
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6" style="margin-top: 60px; margin-left: 70px;" ng-controller="CalendarCtrl as cal">
+    <h1>2016 South Carolina Primary</h1>
+    <div>
+        <p>Immediately following the <a href="/calendar/2016-new-hampshire-primary/">New Hampshire Primary</a>, the South Carolina primary, also known as "first-in-the-south" primary will follow. This event gives the Southern states their say in the process of the presidential nominations. Following the <a href="/calendar/2016-iowa-caucus/">Iowa Caucuses</a> and the <a href="/calendar/2016-new-hampshire-primary/">New Hampshire primary</a>, this primary often helps in narrowing the candidates at a significant scale.
+        </p>
+    </div>
+    <div style="clear: left;"/>
+    <br>
+
+    <h3>Dates Proposed: </h3>
+    <p>The Democrats and Republicans will hold this primary on different days in February 2016.</p>
+    <div style="display:inline-block">
+        <h4 style="font-weight: bold;  margin-right: 100px;">Republicans Date</h4>
+        <h5 style="color: #b22234; font-weight: bold;">February 20, 2016 - Saturday</h5>
+    </div>
+    <div style="display:inline-block;">
+        <h4 style="font-weight: bold;">Democrats Date</h4>
+        <h5 style="color: #1c4280; font-weight: bold;">February 27, 2016 - Saturday</h5>
+    </div>
+    <br><br>
+
+    <h3>State Party Websites</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://www.scgop.com/" style="color: #b22234; text-align: center; text-decoration: none;"><img style="width: 270px; margin-top: 45px; margin-bottom: 54px; height: 100px;" src="assets/images/sc_rep.png" height="200"><br><div>Republican Party of South Carolina</div></a>
+        </div>
+        <div class="col-md-4" style="margin-left: 50px;">
+            <a href="http://scdp.org/" style="color: #1c4280; text-align: center; text-decoration: none;"><img style="width: 220px; margin-left: 20px; margin-top: 50px; margin-bottom: 49px;" src="assets/images/sc_dem.png" height="100"><br><div>Democratic Party of South Carolina</div></a>
+        </div>
+    </div>
+    <br>
+
+    <h3>Historical Winners</h3>
+    <p>2012: Newt Gingrich (R)<Br>2008: Barack Obama (D), John McCain (R)<br>2004: John Edwards (D)<br>2000: Al Gore (D), George W. Bush (R)<br>1996: Bob Dole (R)</p>
+    <br>
+
+    <h3>What is the South Carolina Primary?</h3>
+    <p>The South Carolina presidential primary is one of several key, "early-state" primary elections in the process of the Republican and Democratic Parties. This event helps in choosing their respective general election nominees for the President of the United States.</p>
+    <p>It is a state-sponsored primary day for voting. Voters will vote at voting locations in their precincts and eventually aide in choosing their respective presidential nominee for their respective parties. The SC Primary is similar to the New Hampshire and Iowa events. NH holds the "first in the nation" title whereas SC holds the "first in the south" title.</p>
+    <p>This event has often played the role of a tie-breaker between Iowa and New Hamprshire in the presidential nomination process, especially when the other two states differ in their selection of candidates. In 2012, Iowa and New Hampshire split with Rick Santorum in Iowa and Mitt Romney in the state of New Hampshire. However, when it came to South Carolina, neither of the two candidates won there. The title went to Newt Gingrich. It definitely helped boost his campaign into other primaries and events. SC has a history of selecting the candidate who goes on to become the nominee in 1996, 2000 and 2008. 2012 saw a new light. Will this repeat in 2016? Time will tell.</p>
+</div>

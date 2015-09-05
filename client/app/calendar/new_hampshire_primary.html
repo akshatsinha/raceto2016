@@ -1,0 +1,65 @@
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+
+<div class="col-md-3" style="margin-top: 70px; " ng-controller="CalendarLeftCtrl as clc">
+    <div class="list-group">
+        <h3>Debate Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('repdebate')">
+            <h4 class="list-group-item-heading">2016 Republican Debate Schedule</h4>
+            <p class="list-group-item-text">The Republican National Committee released list of officially sanctioned debates</p>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('demdebate')">
+            <h4 class="list-group-item-heading">2016 Democratic Debate Schedule</h4>
+            <p class="list-group-item-text">Up-to-date schedule of the Democratic Primary Debates of 2015/2016</p>
+        </a>
+    </div>
+    <br>
+    <div class="list-group">
+        <h3>Primary Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('iowa')">
+            <h4 class="list-group-item-heading">2016 Iowa Caucus</h4>
+        </a>
+        <a href="#" class="list-group-item active" ng-click="clc.clickedSchedule('newhampshire')">
+            <h4 class="list-group-item-heading">2016 New Hampshire Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('southcarolina')">
+            <h4 class="list-group-item-heading">2016 South Carolina Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('nevada')">
+            <h4 class="list-group-item-heading">2016 Nevada Caucus</h4>
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6" style="margin-top: 60px; margin-left: 70px;" ng-controller="CalendarCtrl as cal">
+    <h1>2016 New Hampshire Primary</h1>
+    <div>
+        <p>Also known as the "first-in-the-nation", the New Hampshire Primary will be held in the month of February in 2016. After the <a href="/calendar/2016-iowa-caucus/">Iowa Caucuses</a>, this will be the first actual primary vote to take place. At the New Hamprshire primary, delegates will be chosen to serve at the national party conventions. The conventions then select the nominee.
+        </p>
+    </div>
+    <div style="clear: left;"/>
+    <p>The different between a caucus and a primary in presidential campaigns - a caucus is a system of local gatherings where voters decide which candidate to support and select delegates for nominating conventions. A primary is a statewide voting process in which voters cast secret ballots for their preferred candidates.</p>
+    <br>
+
+    <h3>Date Proposed: </h3><h4 style="font-weight: bold; color: #b22234">Februray 9, 2016 - Tuesday</h4>
+    <br>
+
+    <h3>State Party Websites</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://www.iowagop.org/" style="color: #b22234; text-align: center; text-decoration: none;"><img style="width: 270px; margin-top: 45px; margin-bottom: 54px; height: 100px;" src="assets/images/nh_rep.png" height="200"><br><div>Republican Party of New Hampshire</div></a>
+        </div>
+        <div class="col-md-4" style="margin-left: 50px;">
+            <a href="http://iowademocrats.org/" style="color: #1c4280; text-align: center; text-decoration: none;"><img style="width: 200px; margin-left: 20px;" src="assets/images/nh_dem.png" height="200"><br><div>Democratic Party of New Hampshire</div></a>
+        </div>
+    </div>
+    <br>
+
+    <h3>Historical Winners</h3>
+    <p>2012: Mitt Romney (R)<br>2008: Hillary Clinton (D), John McCain (R)<br>2004: John Kerry (D)<br>2000: Al Gore (D), John McCain (R)<br>1996: Pat Buchanan (R)</p>
+    <br>
+
+    <h3>What is the New Hamprshire Primary?</h3>
+    <p>The New Hampshire primary is the first primary election held in the United States and the second step following the Iowa Caucuses in choosing the Democratic and Republican nominees for the presidency. It takes place in the small state of New Hampshire and is designed to give an early and important voice to the New England region much like the Iowa Caucus gives an early and important voice to the Midwest, South Carolina Primary to the South and Nevada Caucus to the West.</p>
+    <p>New Hampshire is considered an independent state that votes both Democrat and Republican and therefore has been considered a good gauge of the nations feelings. Though more liberal west coast voters, southern conservatives and minorities would probably beg to differ. The state’s population is 96% white. Nevertheless, the voters of New Hampshire seem to be aware of this and vote for a candidate’s nationwide-electability in addition to their own personal choice.</p>
+    <p>The New Hampshire Primary gives a candidate with little money, low name recognition or candidates from smaller states legitimate shots at winning. It is a small state who demands personal contact and is opposed to typical negative political ads. History says do well in Iowa or New Hampshire or go home.</p>
+</div>

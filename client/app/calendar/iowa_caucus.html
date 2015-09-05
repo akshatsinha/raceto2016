@@ -1,0 +1,74 @@
+<div ng-include="'components/navbar/navbar.html'" class="navbar-top"></div>
+
+<div class="col-md-3" style="margin-top: 70px; " ng-controller="CalendarLeftCtrl as clc">
+    <div class="list-group">
+        <h3>Debate Schedules</h3>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('repdebate')">
+            <h4 class="list-group-item-heading">2016 Republican Debate Schedule</h4>
+            <p class="list-group-item-text">The Republican National Committee released list of officially sanctioned debates</p>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('demdebate')">
+            <h4 class="list-group-item-heading">2016 Democratic Debate Schedule</h4>
+            <p class="list-group-item-text">Up-to-date schedule of the Democratic Primary Debates of 2015/2016</p>
+        </a>
+    </div>
+    <br>
+    <div class="list-group">
+        <h3>Primary Schedules</h3>
+        <a href="#" class="list-group-item active" ng-click="clc.clickedSchedule('iowa')">
+            <h4 class="list-group-item-heading">2016 Iowa Caucus</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('newhampshire')">
+            <h4 class="list-group-item-heading">2016 New Hampshire Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('southcarolina')">
+            <h4 class="list-group-item-heading">2016 South Carolina Primary</h4>
+        </a>
+        <a href="#" class="list-group-item" ng-click="clc.clickedSchedule('nevada')">
+            <h4 class="list-group-item-heading">2016 Nevada Caucus</h4>
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6" style="margin-top: 60px; margin-left: 70px;" ng-controller="CalendarCtrl as cal">
+    <h1>2016 Iowa Caucus</h1>
+    <div>
+        <p>The Iowa caucuses are proposed to be held in February 2016. These are events where voters from all of 1,774 voting precincts of Iowa meet to elect delegates to the county conventions. From the 99 county conventions, delegates are chosen for the state party convention. Eventually, the state party convention elects delegates to attend the national party convention, where a Presidential nominee is selected. The process is similar for both Democrat and Republican candidates. The winner of the Iowa caucus receives the most delegates elected to the county convention, which then elects delegates for that candidate to the state convention, and eventually, to the national convention.
+        </p>
+    </div>
+    <div style="clear: left;"/>
+
+    <p>Country Convention > State Convention > State Party Convention > National Party Convention > Presidential Nominee</p>
+    <br>
+
+    <h3>Date Proposed: </h3><h4 style="font-weight: bold; color: #b22234">Februray 1, 2016 - Monday</h4>
+    <br>
+
+    <h3>State Party Websites</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="https://www.iowagop.org/" style="color: #b22234; text-align: center; text-decoration: none;"><img style="width: 270px;" src="assets/images/iowa_rep.jpg" height="200"><br><div>Republican Party of Iowa</div></a>
+        </div>
+        <div class="col-md-4">
+            <a href="http://iowademocrats.org/" style="color: #1c4280; text-align: center; text-decoration: none;"><img style="width: 270px; margin-top: 45px; margin-bottom: 54px;" src="assets/images/iowa_dem.png" height="100"><br><div>Democratic Party of Iowa</div></a>
+        </div>
+    </div>
+    <br>
+
+
+    <h3>Historical Winners</h3>
+    <p>2012: Rick Santorum (R)<Br>2008: Barack Obama (D), Mike Huckabee (R)<br>2004: John Kerry (D)<br>2000: Al Gore (D), George W. Bush (R)<br>1996: Bob Bole (R)</p>
+    <br>
+
+    <h3>Process</h3>
+    <p>The Iowa caucuses are different from other states in the common primary election methods. They are defined as "gathering of neighbors". The people of Iowa 'gather' at set locations in each of the precincts in the state instead of heading to the polls and casting ballots. They meet typically in churches, schools, public libraries and sometimes even individuals' houses. Although these caucuses are held every two years, the one for presidential race are held once every four. These recieve attention at a national level. </p>
+    <br>
+
+    <h3>Republican Party</h3>
+    <p>A vote is cast by each voter by a secret ballot. The voters listen to campaigns for every participating candidate and then write their choices on a blank sheet of paper. The Republic Party of Iowa tabulates and announces the results at each precinct. These are then published by media. 2008 saw some precincts use a show of hands or pre-printed ballots.</p>
+    <p>Delegates go to the county conventions and from there, delegates are chosen to go to the district conventions. Delegates for the Iowa State Convention are then chosen here. Therefore, it is the Republican Iowa State Convention which selects the candidates from Iowa to the Republican National Convention.</p>
+    <br>
+    <h3>Democratic Party</h3>
+    <p>The Democratic presidential preference rules are far more complex. This complexity comes because national party rules require proportional allocation of delegates at every level of a caucus-to-convention nomination system. The viability threshold requirement adds to this complexity, but the system may well end up giving more candidates a chance and more voters a choice, and bring about more sincere voting. Party rules require that “preference groups” not be formed until half an hour after the caucus opens, so the time is usually filled by reading letters of greetings from elected officials, and passing the hat to raise money for the local and state parties. Once the appointed time arrives, things shift into gear.</p>
+</div>
+
