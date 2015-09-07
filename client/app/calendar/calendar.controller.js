@@ -8,6 +8,7 @@ angular.module('raceApp')
         var clc = this;
         angular.extend(clc, new EventDispatchingSvc($scope));
 
+        clc.dispatch('title:update', 'Calendar');
         clc.dispatch('schedule:clicked', 'repdebate');
 
         clc.clickedSchedule = function(sched_clicked) {
