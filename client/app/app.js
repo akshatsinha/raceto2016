@@ -8,6 +8,7 @@ angular.module('raceApp', [
         'ui.bootstrap',
         'timer',
         'chart.js'
+        
     ])
     .value('_', window._)
     .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
